@@ -21,14 +21,14 @@ Se tiver sugestões para melhorar o script, ou identificar erros sistemáticos n
 ## Processo e produto do script
 
 O BUSCA_DOU executa suas funções através de uma série de passos:
-1.	Acessa o site endereço https://inlabs.in.gov.br/, o qual distribui diariamente o DOU em formato .xml.
-2.	Realiza login a partir do e-mail e da senha do usuário.
-3.	A partir das definições das edições do DOU (regular e/ou extra) e das partes (1, 2, e/ou 3) a serem buscadas, faz o download os arquivos .xml (cada qual contendo um ato) relativos... 
-a.	...à edição regular do DOU do dia em que for executado, e
-b.	...à edição extra do DOU do dia anterior àquele em que for executado.
-4.	Busca, entre os arquivos .xml, aqueles cujos textos correspondam aos parâmetros de pesquisa.
-5.	Extrai os textos dos arquivos .xml selecionados, colocando-os em arquivos .txt
-6.	Deleta os arquivos .xml
+- Acessa o site endereço https://inlabs.in.gov.br/, o qual distribui diariamente o DOU em formato .xml.
+- Realiza login a partir do e-mail e da senha do usuário.
+- A partir das definições das edições do DOU (regular e/ou extra) e das partes (1, 2, e/ou 3) a serem buscadas, faz o download os arquivos .xml (cada qual contendo um ato) relativos... 
+  - à edição regular do DOU do dia em que for executado, e
+  - à edição extra do DOU do dia anterior àquele em que for executado.
+- Busca, entre os arquivos .xml, aqueles cujos textos correspondam aos parâmetros de pesquisa.
+- Extrai os textos dos arquivos .xml selecionados, colocando-os em arquivos .txt
+- Deleta os arquivos .xml
 
 O produto (se tudo ocorrer bem) são pastas contendo os arquivos .txt produzidos, salvas no mesmo diretório onde se encontrar o script. 
 
