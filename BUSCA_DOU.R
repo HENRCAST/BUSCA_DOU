@@ -7,7 +7,7 @@ tryCatch(
         error = function(cond) {
                 if(chave_pushbullet != ""){
                         pbSetup(chave_pushbullet, defdev = "0")
-                        pbPost(type = "note", title = "Monitoramento do DOU",
+                        pbPost(type = "note", title = "BUSCA_DOU",
                                body = paste("Erro na busca. Segue a mensagem do script:", 
                                             cond, sep = " "))
                 }

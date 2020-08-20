@@ -384,7 +384,7 @@ n_analisados <- as.character(length(analisados.list))
 
 if(chave_pushbullet != ""){
         pbSetup(chave_pushbullet, defdev = "0")
-        pbPost(type = "note", title = "Monitoramento do DOU",
+        pbPost(type = "note", title = "BUSCA_DOU",
                body = paste("Busca realizada! Foram encontrados", 
                             n_analisados, "resultados.", sep = " "))
 }
