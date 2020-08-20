@@ -37,7 +37,7 @@ O produto (se tudo ocorrer bem) são pastas contendo os arquivos .txt produzidos
 - Baixe e instale os programas “R” e “R Studio”. Ambos são gratuitos.
   - “R” está disponível em: https://cran.r-project.org/. 
   - “R Studio” está disponível em: https://rstudio.com/products/rstudio/. 
-- Registre-se no site inlabs: https://inlabs.in.gov.br/acessar.php. 
+- Registre-se no site https://inlabs.in.gov.br/acessar.php. 
 - Baixe o pacote do BUSCA_DOU em seu repositório no GitHub.
   - O pacote está disponível em: https://github.com/HENRCAST/BUSCA_DOU. 
   - Para baixar, clique em “CODE -> Dowload ZIP”
