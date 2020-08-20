@@ -3,7 +3,7 @@
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
 tryCatch(
-        source('Versao_atual.R'),
+        source('Script_corpo.R'),
         error = function(cond) {
                 if(chave_pushbullet != ""){
                         pbSetup(chave_pushbullet, defdev = "0")
