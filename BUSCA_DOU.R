@@ -8,7 +8,7 @@ tryCatch(
                 if(chave_pushbullet != ""){
                         pbSetup(chave_pushbullet, defdev = "0")
                         pbPost(type = "note", title = "Monitoramento do DOU",
-                               body = paste("Erro na busca. Essa é a mensagem do script:", 
+                               body = paste("Erro na busca. Segue a mensagem do script:", 
                                             cond, sep = " "))
                 }
                 return(NA)
