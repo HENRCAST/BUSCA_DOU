@@ -5,4 +5,5 @@ goto :EOF
 :minimized
 rem Anything after here will run in a minimized window
 Rscript --vanilla tryCatch.R %CD%
+echo %TIME% %DATE% >> log.txt
 exit
