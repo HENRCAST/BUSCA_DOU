@@ -1,6 +1,6 @@
 #Script por Henrique Almeida de Castro
 
-wd <- commandArgs(trailingOnly = TRUE)
+wd <- paste(commandArgs(trailingOnly = TRUE), collapse = " ")
 
 setwd(wd)
 
