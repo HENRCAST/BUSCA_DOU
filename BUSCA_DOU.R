@@ -1,6 +1,8 @@
 #Script por Henrique Almeida de Castro
 
-setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+wd <- commandArgs(trailingOnly = TRUE)
+
+setwd(wd)
 
 tryCatch(
         source('Script_corpo.R'),

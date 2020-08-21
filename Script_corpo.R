@@ -1,7 +1,6 @@
 #### PARTE 1: PREPARACAO ####
 
 #Carrega arquivo config
-setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 source('config.R')
 
 #Checa se pacotes necessarios estao instalados; se n, instala
