@@ -45,88 +45,62 @@ hoje <- as.character(hoje)
 #Baixa DOU1
 if(str_contains(dou, "1") == TRUE){
         
-        #testa se dou especial foi publicado....
-        dou1_url <- paste("https://inlabs.in.gov.br/index.php?p=",
-                          hoje, "&dl=", hoje, "-DO1.zip", sep = "") #define url de teste
-        dou1_url_teste <- jump_to(inlabs, dou1_url,
-                                  httr::config(followlocation = FALSE)) #...impedindo redirecionamentos
-        dou1_url_teste <- as.character(dou1_url_teste)
+        #Cria diretorio
+        dir.create(hoje)
         
-        if(str_contains(dou1_url_teste, 'status_code = 200') == TRUE){
-                
-                #Cria diretorio
-                dir.create(hoje)
-                
-                #Gera nomes necessarios
-                dou1_zip <- paste(hoje, "/", "DO1.zip", sep = "") #p/ arquivo zip baixado
-                dou1_dir <- paste(hoje, "/", "-DO1", sep = "") #p/ diretorio de descompactados
-                
-                #Acoes
-                jump_to(inlabs, dou1_url, #vai para url de download...
-                        config = write_disk(dou1_zip, overwrite = TRUE)) # ...e baixa .zip
-                unzip(dou1_zip, #descompacta zip
-                      exdir = dou1_dir, overwrite = TRUE) #e define diretorio de saida
-                unlink(dou1_zip)#deleta .zip
-                
-        }
+        #Gera nomes necessarios
+        dou1_url <- paste("https://inlabs.in.gov.br/index.php?p=",
+                          hoje, "&dl=", hoje, "-DO1.zip", sep = "")
+        dou1_zip <- paste(hoje, "/", "DO1.zip", sep = "") #p/ arquivo zip baixado
+        dou1_dir <- paste(hoje, "/", "-DO1", sep = "") #p/ diretorio de descompactados
+        
+        #Acoes
+        jump_to(inlabs, dou1_url, #vai para url de download...
+                config = write_disk(dou1_zip, overwrite = TRUE)) # ...e baixa .zip
+        unzip(dou1_zip, #descompacta zip
+              exdir = dou1_dir, overwrite = TRUE) #e define diretorio de saida
+        unlink(dou1_zip)#deleta .zip
 }
 
 #Baixa DOU2
 if(str_contains(dou, "2") == TRUE){
         
-        #testa se dou especial foi publicado....
+        #Cria diretorio
+        dir.create(hoje)
+        
+        #Gera nomes necessarios
         dou2_url <- paste("https://inlabs.in.gov.br/index.php?p=",
                           hoje, "&dl=", hoje, "-DO2.zip", sep = "") #define url de teste
-        dou2_url_teste <- jump_to(inlabs, dou2_url,
-                                  httr::config(followlocation = FALSE)) #...impedindo redirecionamentos
-        dou2_url_teste <- as.character(dou2_url_teste)
+        dou2_zip <- paste(hoje, "/", "DO2.zip", sep = "") #p/ arquivo zip baixado
+        dou2_dir <- paste(hoje, "/", "-DO2", sep = "") #p/ diretorio de descompactados
         
-        if(str_contains(dou2_url_teste, 'status_code = 200') == TRUE){
-                
-                #Cria diretorio
-                dir.create(hoje)
-                
-                #Gera nomes necessarios
-                dou2_zip <- paste(hoje, "/", "DO2.zip", sep = "") #p/ arquivo zip baixado
-                dou2_dir <- paste(hoje, "/", "-DO2", sep = "") #p/ diretorio de descompactados
-                
-                #Acoes
-                jump_to(inlabs, dou2_url, #vai para url de download...
-                        config = write_disk(dou2_zip, overwrite = TRUE)) # ...e baixa .zip
-                unzip(dou2_zip, #descompacta zip
-                      exdir = dou2_dir, overwrite = TRUE) #e define diretorio de saida
-                unlink(dou2_zip)#deleta .zip
-                
-        }
+        #Acoes
+        jump_to(inlabs, dou2_url, #vai para url de download...
+                config = write_disk(dou2_zip, overwrite = TRUE)) # ...e baixa .zip
+        unzip(dou2_zip, #descompacta zip
+              exdir = dou2_dir, overwrite = TRUE) #e define diretorio de saida
+        unlink(dou2_zip)#deleta .zip
 }
 
 #Baixa DOU3
 if(str_contains(dou, "3") == TRUE){
         
-        #testa se dou especial foi publicado....
+        #Cria diretorio
+        dir.create(hoje)
+        
+        #Gera nomes necessarios
         dou3_url <- paste("https://inlabs.in.gov.br/index.php?p=",
                           hoje, "&dl=", hoje, "-DO3.zip", sep = "") #define url de teste
-        dou3_url_teste <- jump_to(inlabs, dou3_url,
-                                  httr::config(followlocation = FALSE)) #...impedindo redirecionamentos
-        dou3_url_teste <- as.character(dou3_url_teste)
+        dou3_zip <- paste(hoje, "/", "DO3.zip", sep = "") #p/ arquivo zip baixado
+        dou3_dir <- paste(hoje, "/", "-DO3", sep = "") #p/ diretorio de descompactados
         
-        if(str_contains(dou3_url_teste, 'status_code = 200') == TRUE){
-                
-                #Cria diretorio
-                dir.create(hoje)
-                
-                #Gera nomes necessarios
-                dou3_zip <- paste(hoje, "/", "DO3.zip", sep = "") #p/ arquivo zip baixado
-                dou3_dir <- paste(hoje, "/", "-DO3", sep = "") #p/ diretorio de descompactados
-                
-                #Acoes
-                jump_to(inlabs, dou3_url, #vai para url de download...
-                        config = write_disk(dou3_zip, overwrite = TRUE)) # ...e baixa .zip
-                unzip(dou3_zip, #descompacta zip
-                      exdir = dou3_dir, overwrite = TRUE) #e define diretorio de saida
-                unlink(dou3_zip)#deleta .zip
-                
-        }
+        #Acoes
+        jump_to(inlabs, dou3_url, #vai para url de download...
+                config = write_disk(dou3_zip, overwrite = TRUE)) # ...e baixa .zip
+        unzip(dou3_zip, #descompacta zip
+              exdir = dou3_dir, overwrite = TRUE) #e define diretorio de saida
+        unlink(dou3_zip)#deleta .zip
+        
 }
 
 #### PARTE 4: ANALISA DOU ####
